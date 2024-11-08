@@ -2,12 +2,11 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    border-bottom: 1px solid #595959;
     padding: 12px 8px;
+    transition: background-color 300ms ease-out;
 }
 
 .container:hover {
-    border-bottom: 0px solid #000000;
     background-color: #373737;
     border-radius: 8px;
 }

@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import SearchBar from './SearchBar';
-import Track from './Track';
+import SearchResults from './SearchResults';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <div className='main-column'>
         <h1>Create a Playlist</h1>
         <SearchBar />
-        <Track />
+        <SearchResults />
       </div>
     </div>
   );
