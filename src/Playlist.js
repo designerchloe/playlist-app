@@ -1,10 +1,11 @@
 import React, {useState, useRef, useEffect} from 'react';
 import Button from './Button';
-import Track from './Track';
+import Tracklist from './Tracklist';
 import styles from './Playlist.module.css';
 
-const Playlist = () => {
-    const [value, setValue] = useState('Fresh new list');
+
+const Playlist = (props) => {
+    const [value, setValue] = useState(props.name);
     
 
     return (
@@ -24,11 +25,7 @@ const Playlist = () => {
                 </div>
                 <Button />
             </div>
-            <div className={styles.tracklist}>
-                {/* <Track />
-                <div className={styles.rule}></div>
-                <Track /> */}
-            </div>
+            <Tracklist tracks={props.tracks} />
         </div>
     )
 };

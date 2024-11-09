@@ -8,27 +8,27 @@ const results = [
   {
     title: 'Mary Jane.',
     artist: 'RAYE',
-    id: 1
+    id: '1'
   },
   {
     title: 'Genesis, pt. ii',
     artist: 'RAYE',
-    id: 2
+    id: '2'
   },
   {
     title: 'The Thrill is Gone.',
     artist: 'RAYE',
-    id: 3
+    id: '3'
   },
   {
     title: 'Oscar Winning Tears.',
     artist: 'RAYE',
-    id: 4
+    id: '4'
   },
   {
     title: 'Escapism.',
     artist: 'RAYE',
-    id: 5
+    id: '5'
   }
 ];
 
@@ -42,7 +42,7 @@ const [resultsArr, setResultsArr] = useState(results);
         <SearchBar />
         <SearchResults results={resultsArr}/>
       </div>
-      <Playlist />
+      <Playlist name='Fresh new list' tracks={[]} />
     </div>
   );
 }

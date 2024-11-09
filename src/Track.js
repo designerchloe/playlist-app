@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import styles from './Track.module.css';
 
+//let selectedSongIds = ['1', '2'];
 
 const Track = (props) => {
     const [isHovered, setIsHovered] = useState(false);
-    const [isSelected, setIsSelected] = useState(false);
+    
 
     return (
         <div 
         onMouseEnter={() => setIsHovered(true)} 
         onMouseLeave={() => setIsHovered(false)} 
-        onClick={() => setIsSelected(true)}
         className={styles.container}>
             <div className={styles.text}>
                 <p className={styles.song}>{props.title}</p>
