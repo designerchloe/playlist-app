@@ -2,6 +2,7 @@ import './App.css';
 import SearchBar from './SearchBar';
 import SearchResults from './SearchResults';
 import Button from './Button';
+import Playlist from './Playlist';
 
 function App() {
   return (
@@ -10,8 +11,8 @@ function App() {
         <h1>Create a Playlist</h1>
         <SearchBar />
         <SearchResults />
-        <Button />
       </div>
+      <Playlist />
     </div>
   );
 }

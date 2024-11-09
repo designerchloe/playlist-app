@@ -4,6 +4,7 @@
     width: 100%;
     padding: 12px 8px;
     transition: background-color 300ms ease-out;
+    border-radius: 8px;
 }
 
 .container:hover {
