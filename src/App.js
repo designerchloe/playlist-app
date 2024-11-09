@@ -1,7 +1,6 @@
 import './App.css';
 import SearchBar from './SearchBar';
 import SearchResults from './SearchResults';
-import Button from './Button';
 import Playlist from './Playlist';
 
 function App() {
