@@ -25,9 +25,9 @@ const Playlist = () => {
                 <Button />
             </div>
             <div className={styles.tracklist}>
-                <Track />
+                {/* <Track />
                 <div className={styles.rule}></div>
-                <Track />
+                <Track /> */}
             </div>
         </div>
     )
