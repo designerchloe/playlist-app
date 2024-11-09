@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import styles from './Track.module.css';
 
-//let selectedSongIds = ['1', '2'];
 
 const Track = (props) => {
     const [isHovered, setIsHovered] = useState(false);
     
+    const handleClick = (e) => {
+        const trackIdToAdd = props.id;
+        const trackToAdd = props.results[trackIdToAdd];
+        props.updatePlaylist(trackToAdd);
+    }
 
     return (
         <div 
         onMouseEnter={() => setIsHovered(true)} 
-        onMouseLeave={() => setIsHovered(false)} 
+        onMouseLeave={() => setIsHovered(false)}
+        onClick={handleClick}
         className={styles.container}>
             <div className={styles.text}>
                 <p className={styles.song}>{props.title}</p>
