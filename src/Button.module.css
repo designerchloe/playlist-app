@@ -7,9 +7,10 @@
     border-radius: 4px;
     font-weight: 500;
     font-family: "DM Sans", sans-serif;
+    transition: background-color 300ms ease-out;
 }
 
 .button:hover {
-    background-color: #323232;
-    color: #fff;
+    background-color: #fff;
+    /* color: #fff; */
 }
