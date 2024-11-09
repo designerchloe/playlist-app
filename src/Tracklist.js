@@ -4,11 +4,11 @@ import Track from './Track';
 
 const Tracklist = (props) => {
     
-    if (props.tracks.length > 0) {
+    if (props.tracks.length >= 0) {
         return (
             <div className={styles.tracklist}>
                 {props.tracks.map((track) => (
-                    <Track title={track.title} artist={track.artist} id={track.id}/>
+                    <Track inTracklist={true} tracks={props.tracks} title={track.title} artist={track.artist} id={track.id} removeFromPlaylist={props.removeFromPlaylist} />
                 ))}
             </div>
         )

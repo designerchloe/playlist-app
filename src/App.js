@@ -40,14 +40,25 @@ const updatePlaylist = (selectedTracks) => {
   setTracks(prev => [...prev, selectedTracks]);
 };
 
+const removeFromPlaylist = (selectedTrack) => {
+  setTracks(prev => {
+    const index = prev.indexOf(selectedTrack);
+    if (index > -1) {
+      const newArr = [...prev];
+      newArr.splice(index, 1);
+      return newArr;
+    }
+  })
+};
+
   return (
     <div className='page-container'>
       <div className='main-column'>
         <h1>Create a Playlist</h1>
         <SearchBar />
-        <SearchResults results={resultsArr} updatePlaylist={updatePlaylist} />
+        <SearchResults results={resultsArr} updatePlaylist={updatePlaylist} tracks={tracks} />
       </div>
-      <Playlist name='Fresh new list' tracks={tracks} />
+      <Playlist name='Fresh new list' tracks={tracks} removeFromPlaylist={removeFromPlaylist} />
     </div>
   );
 }

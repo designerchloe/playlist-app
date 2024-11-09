@@ -9,7 +9,7 @@ const SearchResults = ( { results, updatePlaylist } ) => {
         <div className={styles.container}>
             {results.map((result) => (
                 <div>
-                    <Track results={results} updatePlaylist={updatePlaylist} title={result.title} artist={result.artist} id={result.id} />
+                    <Track inTracklist={false} updatePlaylist={updatePlaylist} results={results} title={result.title} artist={result.artist} id={result.id} />
                     <div className={styles.rule}></div>
                 </div>
             ))}
