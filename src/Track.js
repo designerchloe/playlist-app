@@ -15,10 +15,11 @@ const Track = (props) => {
                 setIsSelected(true);
             }
         } else {
-            const trackIdToRemove = props.id;
-            const trackToRemove = props.tracks[trackIdToRemove];
+            const trackIndToRemove = props.tracks.findIndex(track => track.id === props.id);
+            const trackToRemove = props.tracks[trackIndToRemove];
             props.removeFromPlaylist(trackToRemove);
-            console.log(props.tracks);
+            setIsSelected(false);
+            console.log(isSelected);
         }
     };
 
