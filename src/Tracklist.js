@@ -4,7 +4,7 @@ import Track from './Track';
 
 const Tracklist = (props) => {
     
-    if (props.tracks.length >= 0) {
+    if (props.tracks) {
         return (
             <div className={styles.tracklist}>
                 {props.tracks.map((track) => (

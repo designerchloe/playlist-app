@@ -18,6 +18,7 @@ const Track = (props) => {
             const trackIdToRemove = props.id;
             const trackToRemove = props.tracks[trackIdToRemove];
             props.removeFromPlaylist(trackToRemove);
+            console.log(props.tracks);
         }
     };
 

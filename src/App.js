@@ -37,18 +37,17 @@ const [resultsArr, setResultsArr] = useState(results);
 const [tracks, setTracks] = useState([]);
 
 const updatePlaylist = (selectedTracks) => {
-  setTracks(prev => [...prev, selectedTracks]);
+  setTracks((prev) => {
+    if (prev.length > 0){
+      return [...prev, selectedTracks]
+    } else {
+      return [selectedTracks];
+    }
+  })
 };
 
 const removeFromPlaylist = (selectedTrack) => {
-  setTracks(prev => {
-    const index = prev.indexOf(selectedTrack);
-    if (index > -1) {
-      const newArr = [...prev];
-      newArr.splice(index, 1);
-      return newArr;
-    }
-  })
+  setTracks(prev => prev.filter((currentTrack) => currentTrack.id !== selectedTrack.id))
 };
 
   return (
